@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 1</title>
+</head>
+<body>
+
+    <script>
+        let v1
+        let v2
+        let v3
+        let sum  = 0;
+
+        window.onload = (event) => {
+        v1 = Number(prompt("Digite o primeiro número:"));
+        v2 = Number(prompt("Digite o segundo número:"));
+        v3 = Number(prompt("Digite o terceiro número:"));
+        sum = v1 + v2 + v3;
+
+        console.log("Os números digitados são: " + v1 + ", " + v2 + " e " + v3);
+        showResult();
+        };
+
+        const showResult = () => {
+            const div = document.createElement('div');
+            const h1 = document.createElement('h1');
+            h1.innerText = 'A soma dos 3 números é:';
+            const h2 = document.createElement('h2');
+            h2.innerText = `${sum}`;
+            div.appendChild(h1);
+            div.appendChild(h2);
+            document.body.appendChild(div);
+        };
+
+   
+    </script>
+</body>
+</html>
